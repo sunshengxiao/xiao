@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+欢迎访问<h1>{{user}}</h1>
+<ul>{% for k,v in dct.items%}
+    <li  style='color:{{forloop.counter|divisibleby:'2' |yesno:"yellow,green"}}'>
+        {{forloop.counter}} {{k}} {{v}}
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
